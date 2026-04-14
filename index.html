@@ -65,9 +65,9 @@
 
     /* 🌌 titre */
     h1 {
-      font-size: 110px; /* augmenté */
+      font-size: 110px;
       letter-spacing: 4px;
-      margin-bottom: 20px; /* espace ajouté */
+      margin-bottom: 20px;
 
       text-shadow:
         0 0 10px #00ffd5,
@@ -87,7 +87,7 @@
     }
 
     p {
-      font-size: 24px; /* augmenté */
+      font-size: 24px;
       margin-top: 10px;
       max-width: 600px;
       opacity: 0.9;
@@ -106,10 +106,10 @@
       color: #00ffd5;
       text-decoration: none;
       font-weight: bold;
-      padding: 10px 18px; /* légèrement augmenté */
+      padding: 10px 18px;
       border-radius: 10px;
       transition: 0.3s;
-      font-size: 18px; /* augmenté */
+      font-size: 18px;
     }
 
     .menu a:hover {
@@ -121,6 +121,7 @@
     .image {
       margin-top: 40px;
       z-index: 2;
+      position: relative;
     }
 
     .image img {
@@ -129,6 +130,42 @@
       box-shadow:
         0 0 20px rgba(0,255,213,0.3),
         0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    /* ✨ bouton entrer amélioré */
+    .enter-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(0,255,213,0.5);
+      box-shadow: 0 0 10px rgba(0,255,213,0.4);
+      transition: 0.3s;
+
+      animation: pulse 2.5s infinite ease-in-out;
+    }
+
+    .enter-btn:hover {
+      background: rgba(0, 255, 213, 0.2);
+      box-shadow: 0 0 25px rgba(0,255,213,1);
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 10px rgba(0,255,213,0.4);
+      }
+      50% {
+        box-shadow: 0 0 25px rgba(0,255,213,0.9);
+      }
     }
 
   </style>
@@ -142,9 +179,7 @@
   <h1>LUMINA</h1>
 
   <p>Revenir à soi. Se libérer. Créer une vie alignée.</p>
-<a href="home.html">
-  <img src="ton-image.png" alt="Entrer sur Lumina">
-</a>
+
   <div class="menu">
     <a href="index.html">Accueil</a>
     <a href="contenu.html">Contenu</a>
@@ -153,6 +188,7 @@
 
   <div class="image">
     <img src="./galaxie.jpg" alt="image">
+    <a href="liens.html" class="enter-btn">Entrer</a>
   </div>
 
   <script>
@@ -162,30 +198,24 @@
       const star = document.createElement("div");
       star.classList.add("star");
 
-      // position horizontale aléatoire
       star.style.left = Math.random() * 100 + "vw";
 
-      // taille aléatoire
       const size = Math.random() * 2 + 1;
       star.style.width = size + "px";
       star.style.height = size + "px";
 
-      // durée aléatoire
       const duration = Math.random() * 5 + 3;
       star.style.animationDuration = duration + "s";
 
-      // délai aléatoire
       star.style.animationDelay = Math.random() * 5 + "s";
 
       starsContainer.appendChild(star);
 
-      // supprimer après animation
       setTimeout(() => {
         star.remove();
       }, duration * 1000);
     }
 
-    // génération continue
     setInterval(createStar, 80);
   </script>
 
