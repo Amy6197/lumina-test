@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Menu - Lumina</title>
+  <title>Contenu - Lumina</title>
 
   <style>
     body {
@@ -12,94 +12,48 @@
       background: url('./galaxie.jpg') no-repeat center center fixed;
       background-size: cover;
 
+      color: white;
       font-family: Arial, sans-serif;
       text-align: center;
-      color: white;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      min-height: 100vh;
     }
 
-    /* 🌌 titre */
     h1 {
-      font-size: 90px;
-      letter-spacing: 4px;
-      margin-bottom: 40px;
-
-      text-shadow:
-        0 0 10px #00ffd5,
-        0 0 20px #6a5cff;
-
-      animation: glow 3s infinite ease-in-out;
-    }
-
-    @keyframes glow {
-      0%, 100% {
-        text-shadow: 0 0 10px #00ffd5, 0 0 20px #6a5cff;
-      }
-      50% {
-        text-shadow: 0 0 25px #00ffd5, 0 0 40px #6a5cff;
-      }
-    }
-
-    /* 🌠 menu stylé */
-    .menu {
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-    }
-
-    .menu a {
-      color: #00ffd5;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 28px;
-
-      padding: 12px 25px;
-      border-radius: 12px;
-
-      transition: 0.3s;
-    }
-
-    .menu a:hover {
-      background: rgba(0, 255, 213, 0.15);
-      box-shadow: 0 0 20px rgba(0,255,213,0.6);
-      transform: scale(1.05);
-    }
-
-    /* 🔙 retour */
-    .back {
       margin-top: 60px;
-      color: white;
-      text-decoration: none;
-      opacity: 0.8;
-      font-size: 16px;
-      transition: 0.3s;
-    }
-
-    .back:hover {
-      opacity: 1;
       text-shadow: 0 0 10px #00ffd5;
     }
 
+    p {
+      max-width: 700px;
+      margin: 40px auto;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #00ffd5;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 40px;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-shadow: 0 0 10px #00ffd5;
+    }
   </style>
 </head>
 
 <body>
 
-  <h1>LUMINA</h1>
+  <h1>Contenu Lumina</h1>
 
-  <div class="menu">
-    <a href="index.html">Accueil</a>
-    <a href="contenu.html">Contenu</a>
-    <a href="liens.html">Liens</a>
-  </div>
+  <p>
+    Sources, auteurs, idées, réflexions, ressources et explorations autour du projet Lumina.
+    <br><br>
+    Cette page est en construction.
+  </p>
 
-  <a class="back" href="index.html">← Retour à l'accueil</a>
+  <a href="index.html">← Retour accueil</a>
 
 </body>
 </html>
