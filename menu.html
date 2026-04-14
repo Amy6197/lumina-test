@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu - Lumina</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('./galaxie.jpg') no-repeat center center fixed;
+      background-size: cover;
+
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 60px;
+      font-size: 50px;
+      text-shadow: 0 0 15px #00ffd5;
+    }
+
+    .menu {
+      margin-top: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .menu a {
+      width: 220px;
+      padding: 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #00ffd5;
+      border: 1px solid rgba(0,255,213,0.4);
+      background: rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      background: rgba(0,255,213,0.15);
+      box-shadow: 0 0 12px rgba(0,255,213,0.4);
+      transform: scale(1.03);
+    }
+
+    .back {
+      margin-top: 50px;
+      display: inline-block;
+      color: white;
+      opacity: 0.7;
+      text-decoration: none;
+    }
+
+    .back:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Table des matières</h1>
+
+  <div class="menu">
+    <a href="contenu.html">📖 Contenu</a>
+    <a href="liens.html">🔗 Liens</a>
+    <a href="#">✍️ Auteurs (à venir)</a>
+    <a href="#">🧠 Analyses (à venir)</a>
+    <a href="#">🃏 Oracle / Tarot (à venir)</a>
+  </div>
+
+  <a class="back" href="index.html">← Retour accueil</a>
+
+</body>
+</html>
