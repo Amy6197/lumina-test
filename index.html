@@ -20,34 +20,37 @@ body {
   color: white;
   text-align: center;
 
-  background: #05060a;
+  background: radial-gradient(circle at 30% 30%, #1a0f2e, #05060a 60%, #02030a);
+  position: relative;
 }
 
-/* 🌌 BRUME COSMIQUE 3 COUCHES */
-body::before {
-  content: "";
+/* 🌫️ BRUME (VERSION ROBUSTE - PAS DE ::before) */
+.fog {
   position: fixed;
-  inset: -50%;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(255, 150, 220, 0.25), transparent 45%),
-    radial-gradient(circle at 70% 40%, rgba(120, 200, 255, 0.22), transparent 50%),
-    radial-gradient(circle at 50% 80%, rgba(180, 120, 255, 0.18), transparent 55%);
-  filter: blur(50px);
-  animation: fog 20s ease-in-out infinite alternate;
+  inset: 0;
   z-index: 0;
+  pointer-events: none;
+
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255, 120, 200, 0.25), transparent 50%),
+    radial-gradient(circle at 70% 40%, rgba(120, 200, 255, 0.22), transparent 55%),
+    radial-gradient(circle at 50% 80%, rgba(180, 120, 255, 0.18), transparent 60%);
+
+  filter: blur(45px);
+  animation: fogMove 18s ease-in-out infinite alternate;
 }
 
-@keyframes fog {
+@keyframes fogMove {
   0% { transform: translate(0,0) scale(1); }
-  100% { transform: translate(4%,3%) scale(1.1); }
+  100% { transform: translate(3%,2%) scale(1.1); }
 }
 
-/* ✨ ÉTOILES LENTES */
+/* ✨ étoiles */
 .stars {
   position: fixed;
   inset: 0;
-  pointer-events: none;
   z-index: 1;
+  pointer-events: none;
 }
 
 .star {
@@ -56,7 +59,7 @@ body::before {
   height: 2px;
   background: white;
   border-radius: 50%;
-  box-shadow: 0 0 8px #00ffd5;
+  box-shadow: 0 0 6px #00ffd5;
   animation: fall linear infinite;
   opacity: 0.8;
 }
@@ -67,60 +70,33 @@ body::before {
   100% { transform: translateY(110vh); opacity: 0; }
 }
 
+/* 🌟 CONTENU AU-DESSUS */
+h1, p, .card {
+  position: relative;
+  z-index: 2;
+}
+
 /* 🌟 TITRE */
 h1 {
   font-size: 90px;
   letter-spacing: 6px;
   text-shadow: 0 0 25px #00ffd5;
   margin: 0;
-  z-index: 2;
-
-  animation: breathe 6s ease-in-out infinite;
 }
 
-@keyframes breathe {
-  0%,100% { transform: scale(1); }
-  50% { transform: scale(1.03); }
-}
-
-p {
-  font-size: 18px;
-  opacity: 0.9;
-  max-width: 600px;
-  margin-bottom: 30px;
-  z-index: 2;
-}
-
-/* 🖼️ IMAGE CENTRALE */
-.card {
-  position: relative;
-  z-index: 2;
-}
-
+/* 🖼️ IMAGE */
 .card img {
   width: 230px;
   border-radius: 18px;
-
-  box-shadow:
-    0 0 30px rgba(0,255,213,0.25),
-    0 0 60px rgba(255,120,220,0.15);
-
-  animation: pulse 5s ease-in-out infinite;
-  transition: 0.3s;
+  box-shadow: 0 0 35px rgba(0,255,213,0.25);
 }
 
-@keyframes pulse {
-  0%,100% { transform: scale(1); }
-  50% { transform: scale(1.04); }
-}
-
-/* 🔘 BOUTON PORTAIL */
+/* 🔘 bouton */
 .enter {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-
   padding: 10px 18px;
   border-radius: 12px;
 
@@ -128,18 +104,10 @@ p {
   color: white;
 
   border: 1px solid #00ffd5;
-  background: rgba(0,0,0,0.45);
-  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
 
-  box-shadow: 0 0 25px rgba(0,255,213,0.4);
-
-  transition: 0.3s;
-  font-weight: bold;
-}
-
-.enter:hover {
-  transform: translate(-50%,-50%) scale(1.1);
-  box-shadow: 0 0 40px rgba(0,255,213,0.8);
+  z-index: 3;
 }
 </style>
 </head>
