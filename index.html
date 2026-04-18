@@ -1,141 +1,167 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Lumina</title>
+  <meta charset="UTF-8">
+  <title>Lumina</title>
 
-<style>
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  overflow: hidden;
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+      background: url('./feerique.jpg') no-repeat center center fixed;
+      background-size: cover;
 
-  font-family: Arial, sans-serif;
-  color: white;
-  text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-  background: #05060a;
-  position: relative;
-}
+      height: 100vh;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      overflow: hidden;
+    }
 
-/* 🌫️ BRUME ULTRA FIABLE */
-.fog {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
+    h1 {
+      font-size: 90px;
+      letter-spacing: 6px;
+      text-shadow: 0 0 20px #00ffd5;
+      margin-bottom: 10px;
+      z-index: 2;
+    }
 
-  background:
-    radial-gradient(circle at 25% 30%, rgba(255, 120, 200, 0.30), transparent 55%),
-    radial-gradient(circle at 70% 40%, rgba(120, 200, 255, 0.25), transparent 60%),
-    radial-gradient(circle at 50% 80%, rgba(180, 120, 255, 0.20), transparent 65%);
+    p {
+      font-size: 20px;
+      opacity: 0.9;
+      max-width: 600px;
+      margin-bottom: 30px;
+      z-index: 2;
+    }
 
-  filter: blur(60px);
-  animation: fogMove 20s ease-in-out infinite alternate;
-}
+    /* 🖼️ carte centrale */
+    .card {
+      position: relative;
+      margin-bottom: 35px;
+      z-index: 2;
+    }
 
-@keyframes fogMove {
-  0% { transform: translate(0,0) scale(1); }
-  100% { transform: translate(3%,2%) scale(1.1); }
-}
+    .card img {
+      width: 200px;
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(0,255,213,0.3);
+      transition: 0.3s;
+    }
 
-/* 🌌 étoiles */
-.stars {
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-}
+    .card img:hover {
+      transform: scale(1.03);
+    }
 
-/* tout ton système star reste identique */
+    /* 🔘 bouton entrer */
+    .enter {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: white;
+      border: 1px solid #00ffd5;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(4px);
+      box-shadow: 0 0 15px rgba(0,255,213,0.4);
+      transition: 0.3s;
+      font-weight: bold;
+    }
 
-/* 🌟 contenu */
-h1, p, .card {
-  position: relative;
-  z-index: 2;
-}
+    .enter:hover {
+      transform: translate(-50%, -50%) scale(1.08);
+      box-shadow: 0 0 25px rgba(0,255,213,0.8);
+    }
 
-/* 🌟 TITRE */
-h1 {
-  font-size: 90px;
-  letter-spacing: 6px;
-  text-shadow: 0 0 25px #00ffd5;
-  margin: 0;
-}
+    /* 🌌 étoiles */
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+    }
 
-/* 🖼️ IMAGE */
-.card img {
-  width: 230px;
-  border-radius: 18px;
-  box-shadow: 0 0 35px rgba(0,255,213,0.25);
-}
+    .star {
+      position: absolute;
+      top: -10px;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #00ffd5;
+      animation: fall linear infinite;
+      opacity: 0.8;
+    }
 
-/* 🔘 bouton */
-.enter {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  padding: 10px 18px;
-  border-radius: 12px;
-
-  text-decoration: none;
-  color: white;
-
-  border: 1px solid #00ffd5;
-  background: rgba(0,0,0,0.5);
-  backdrop-filter: blur(6px);
-
-  z-index: 3;
-}
-</style>
+    @keyframes fall {
+      0% {
+        transform: translateY(-10vh);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh);
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
 
-<body><div class="fog"></div>
-<div class="stars" id="stars"></div>
+<body>
 
-<div class="stars" id="stars"></div>
+  <!-- 🌌 étoiles -->
+  <div class="stars" id="stars"></div>
 
-<h1>LUMINA</h1>
-<p>Revenir à soi. Se libérer. Créer une vie alignée.</p>
+  <h1>LUMINA</h1>
 
-<div class="card">
-  <img src="./feerique.jpg" alt="Lumina">
-  <a class="enter" href="menu.html">Entrer</a>
-</div>
+  <p>Revenir à soi. Se libérer. Créer une vie alignée.</p>
 
-<script>
-const starsContainer = document.getElementById("stars");
+  <!-- 🖼️ image + bouton entrée -->
+  <div class="card">
+    <img src="./galaxie.jpg" alt="Lumina">
+    <a class="enter" href="menu.html">Entrer</a>
+  </div>
 
-function createStar(){
-  const star = document.createElement("div");
-  star.classList.add("star");
+  <!-- 🌠 script étoiles -->
+  <script>
+    const starsContainer = document.getElementById("stars");
 
-  star.style.left = Math.random()*100 + "vw";
+    function createStar() {
+      const star = document.createElement("div");
+      star.classList.add("star");
 
-  const size = Math.random()*2 + 1;
-  star.style.width = size+"px";
-  star.style.height = size+"px";
+      star.style.left = Math.random() * 100 + "vw";
 
-  const duration = Math.random()*6 + 4;
-  star.style.animationDuration = duration+"s";
+      const size = Math.random() * 2 + 1;
+      star.style.width = size + "px";
+      star.style.height = size + "px";
 
-  starsContainer.appendChild(star);
+      const duration = Math.random() * 5 + 3;
+      star.style.animationDuration = duration + "s";
 
-  setTimeout(()=>star.remove(), duration*1000);
-}
+      starsContainer.appendChild(star);
 
-setInterval(createStar, 90);
-</script>
+      setTimeout(() => {
+        star.remove();
+      }, duration * 1000);
+    }
 
-</body>
-</html>
+    setInterval(createStar, 80);
+  </script>
 
 </body>
 </html>
