@@ -9,14 +9,13 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      color: #eaeaea;
 
       /* 🌌 fond galaxie */
       background: url('./galaxie.jpg') no-repeat center center fixed;
       background-size: cover;
     }
 
-    /* ✨ voile lumineux (moins noir, plus doux) */
+    /* voile lumineux */
     body::before {
       content: "";
       position: fixed;
@@ -27,7 +26,7 @@
 
     /* HEADER */
     header {
-      background: rgba(10, 10, 10, 0.5);
+      background: rgba(10, 10, 10, 0.55);
       padding: 15px 25px;
       border-bottom: 1px solid rgba(0,255,213,0.15);
       backdrop-filter: blur(8px);
@@ -45,7 +44,6 @@
       color: #eaeaea;
       text-decoration: none;
       font-weight: 500;
-      transition: 0.2s;
     }
 
     nav a:hover {
@@ -59,19 +57,22 @@
       padding: 50px 20px;
     }
 
+    /* TITRE */
     h1 {
       font-size: 36px;
       margin-bottom: 25px;
-      text-shadow: 0 0 18px rgba(0,255,213,0.25);
+      color: #00ffd5;
+      text-shadow: 0 0 18px rgba(0,255,213,0.35);
     }
 
+    /* INTRO */
     .intro {
-      color: #d0d0d0;
+      color: rgba(0, 255, 213, 0.75);
       margin-bottom: 40px;
       line-height: 1.7;
     }
 
-    /* 🌟 CARTES PLUS LUMINEUSES */
+    /* CARTES */
     .card {
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(0,255,213,0.12);
@@ -92,12 +93,13 @@
     .card h2 {
       margin: 0 0 8px 0;
       font-size: 20px;
-      color: #ffffff;
+      color: #00ffd5;
+      text-shadow: 0 0 10px rgba(0,255,213,0.2);
     }
 
     .card p {
       margin: 0;
-      color: #c7c7c7;
+      color: rgba(235, 235, 235, 0.85);
       line-height: 1.6;
     }
 
@@ -105,11 +107,11 @@
     .note {
       margin-top: 40px;
       font-size: 13px;
-      color: #a0a0a0;
+      color: rgba(0, 255, 213, 0.6);
       line-height: 1.6;
     }
 
-    /* BOUTON RETOUR */
+    /* RETOUR */
     .back {
       margin-top: 45px;
       text-align: center;
@@ -153,36 +155,36 @@
 
   <div class="intro">
     Cette page regroupe les sources philosophiques et spirituelles qui ont inspiré la réflexion autour de Lumina.
-    Elles sont présentées ici comme des points de référence dans un cheminement intérieur.
+    Elles sont présentées comme des points de repère dans un cheminement intérieur.
   </div>
 
   <div class="card">
     <h2>Rudolf Steiner</h2>
-    <p>Exploration des lois spirituelles derrière la matière et la conscience humaine.</p>
+    <p>Exploration des relations entre monde spirituel, matière et conscience humaine.</p>
   </div>
 
   <div class="card">
     <h2>Les Lettres du Christ</h2>
-    <p>Transmission centrée sur la transformation de la conscience et l’unité intérieure.</p>
+    <p>Transmission centrée sur la transformation intérieure et la conscience unifiée.</p>
   </div>
 
   <div class="card">
     <h2>Le Livre d’Urantia</h2>
-    <p>Vision cosmologique de l’univers et de l’évolution spirituelle de la conscience.</p>
+    <p>Vision cosmologique de l’univers et des niveaux de conscience.</p>
   </div>
 
   <div class="card">
     <h2>Bernard de Montréal</h2>
-    <p>Analyse des mécanismes du mental, de l’ego et de la conscience supramentale.</p>
+    <p>Étude des mécanismes du mental, de l’ego et de la conscience supramentale.</p>
   </div>
 
   <div class="card">
     <h2>Baird T. Spalding</h2>
-    <p>Récits d’expériences de conscience élevée et de maîtrise intérieure.</p>
+    <p>Expériences de conscience élevée et de maîtrise intérieure.</p>
   </div>
 
   <div class="note">
-    Ces contenus sont présentés à titre de réflexion personnelle et d’exploration intérieure.
+    Ces contenus sont présentés dans une démarche personnelle d’exploration de la conscience.
   </div>
 
   <div class="back">
