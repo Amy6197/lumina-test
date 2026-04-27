@@ -9,15 +9,12 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-
       background: url('./galaxie.jpg') no-repeat center center fixed;
       background-size: cover;
-
       color: #eaeaea;
-      text-align: center;
     }
 
-    /* 🌌 voile */
+    /* voile sombre */
     body::before {
       content: "";
       position: fixed;
@@ -26,26 +23,28 @@
       z-index: -1;
     }
 
-    /* MENU */
+    /* HEADER simple (menu) */
     header {
       background: rgba(0, 0, 0, 0.6);
       padding: 15px 25px;
-      border-bottom: 1px solid rgba(0,255,213,0.15);
       backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(0,255,213,0.15);
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      gap: 20px;
+      justify-content: center;
+      gap: 18px;
       margin: 0;
       padding: 0;
-      justify-content: center;
+      flex-wrap: wrap;
     }
 
     nav a {
       color: #eaeaea;
       text-decoration: none;
+      font-size: 14px;
     }
 
     nav a:hover {
@@ -53,27 +52,36 @@
     }
 
     h1 {
-      margin-top: 50px;
+      text-align: center;
+      margin-top: 40px;
       color: #00ffd5;
       text-shadow: 0 0 15px rgba(0,255,213,0.3);
     }
 
-    .box {
-      max-width: 700px;
+    /* CONTAINER PRINCIPAL */
+    .container {
+      max-width: 800px;
       margin: 40px auto;
-      padding: 25px;
+      padding: 0 20px;
+    }
 
+    /* BOX TEXTE PRINCIPAL */
+    .box {
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(0,255,213,0.12);
       border-radius: 14px;
-
+      padding: 25px;
+      line-height: 1.75;
+      font-size: 16px;
+      color: rgba(235,235,235,0.92);
       backdrop-filter: blur(6px);
-      color: rgba(235,235,235,0.9);
-      line-height: 1.6;
+      white-space: pre-line;
     }
 
+    /* BOUTON RETOUR */
     .back {
-      margin-top: 40px;
+      text-align: center;
+      margin-top: 35px;
     }
 
     .back a {
@@ -84,6 +92,10 @@
       border-radius: 10px;
       background: rgba(0,0,0,0.3);
       display: inline-block;
+    }
+
+    .back a:hover {
+      box-shadow: 0 0 12px rgba(0,255,213,0.3);
     }
 
   </style>
@@ -105,231 +117,202 @@
 
 <h1>Contenu Lumina</h1>
 
-<div class="box">
-  Passer de la croyance à la compréhension pour enfin savoir.
-  <br><br>
-  La pensée de Rudolf Steiner est vaste, mais on peut la comprendre simplement si on la ramène à son idée centrale :
-👉 l’être humain n’est pas seulement un corps physique, mais un être spirituel en évolution.
+<div class="container">
+  <div class="box">
 
-Je vais te l’expliquer de façon claire, sans jargon.
+Tu peux coller ton texte ici tel quel.
 
-⸻
+👉 Il sera automatiquement :
+- aéré
+- lisible
+- espacé
+- sans effet “mur de texte”
 
-🌱 1. Sa base : l’anthroposophie
+  </div>
 
-Steiner a fondé ce qu’il appelle l’Anthroposophie.
-
-👉 C’est une vision du monde qui cherche à relier science, spiritualité et expérience intérieure.
-
-Contrairement à une religion, ce n’est pas basé sur la foi aveugle.
-Selon lui, chacun peut développer une perception du monde spirituel avec de la discipline intérieure (un peu comme une “science de l’âme”).
-
-⸻
-
-🧍‍♀️ 2. L’être humain en 4 dimensions
-
-Steiner dit que tu es composée de plusieurs “couches” :
-	1.	Corps physique → ton corps matériel
-	2.	Corps éthérique → énergie vitale (ce qui te maintient en vie)
-	3.	Corps astral → émotions, désirs
-	4.	Moi (ou “Je”) → ton essence consciente, spirituelle
-
-👉 Le but de la vie serait d’harmoniser tout ça pour évoluer consciemment.
-
-⸻
-
-🔁 3. Réincarnation et karma
-
-Steiner reprend des idées proches de traditions orientales :
-	•	Tu vis plusieurs vies (réincarnation)
-	•	Tes actions créent un karma (cause → conséquence)
-
-👉 Mais il ajoute une nuance importante :
-le karma n’est pas une punition, c’est un outil d’apprentissage pour ton évolution.
-
-⸻
-
-🌍 4. L’évolution de l’humanité
-
-Selon lui, l’humanité évolue en étapes spirituelles.
-
-On serait actuellement dans une phase où :
-	•	l’intellect est très développé
-	•	mais la connexion spirituelle s’est affaiblie
-
-👉 Le but aujourd’hui :
-retrouver une conscience spirituelle libre, sans retomber dans des croyances aveugles.
-
-⸻
-
-🧠 5. La pensée comme outil spirituel
-
-Un point très important chez Steiner :
-
-👉 penser consciemment est un acte spirituel
-
-Il ne s’agit pas juste de réfléchir, mais de :
-	•	observer ses pensées
-	•	développer une pensée claire, vivante, consciente
-
-Selon lui, c’est comme ça que tu accèdes à une véritable perception du réel.
-
-⸻
-
-🌿 6. Applications concrètes
-
-Ses idées ont donné naissance à plein de choses concrètes :
-	•	Écoles Pédagogie Steiner-Waldorf
-	•	Agriculture Agriculture biodynamique
-	•	Médecine anthroposophique
-	•	Art (eurythmie, etc.)
-
-👉 Donc ce n’est pas juste théorique : c’est appliqué dans la vie.
-
-⸻
-
-⚖️ 7. À garder en tête (important)
-
-Sa pensée est influente, mais aussi controversée :
-	•	Certaines idées ne sont pas reconnues scientifiquement
-	•	Certaines écoles ou pratiques sont critiquées
-	•	C’est un système très structuré, presque “cosmologique”
-
-👉 Donc il vaut mieux :
-prendre ce qui résonne, et garder un esprit critique.
-
-⸻
-
-✨ En résumé
-
-Steiner propose une vision où :
-	•	tu es un être spirituel en évolution
-	•	la vie a un sens profond lié à ton développement intérieur
-	•	tu peux accéder à une forme de connaissance spirituelle par toi-même
-	un des points les plus importants (et souvent mal compris) chez Rudolf Steiner.
-
-Je vais te l’expliquer simplement, sans mystifier inutilement.
-
-⸻
-
-⚖️ 1. L’idée de base
-
-Dans l’Anthroposophie, Steiner décrit trois forces qui influencent l’être humain :
-	•	Luciférienne 🔥
-	•	Ahrimanienne 🧊
-	•	Christique ⚖️ (force d’équilibre)
-
-👉 Ce ne sont pas “le bien vs le mal” au sens classique.
-Ce sont plutôt des tendances, des forces de déséquilibre.
-
-⸻
-
-🔥 2. La force luciférienne (Lucifer)
-
-👉 Liée à la lumière, mais aussi à l’illusion.
-
-Ce que ça pousse à faire :
-	•	Se détacher du réel
-	•	Se sentir “au-dessus”
-	•	Chercher le spirituel… mais sans ancrage
-	•	Vivre dans le rêve, l’imaginaire, l’ego spirituel
-
-En excès :
-	•	Illusions spirituelles
-	•	Délire de grandeur
-	•	Refus du corps et de la matière
-	•	“Je suis spécial / élu / au-dessus des autres”
-
-👉 En résumé :
-trop de ciel, pas assez de terre
-
-⸻
-
-🧊 3. La force ahrimanienne (Ahriman)
-
-👉 Opposée à Lucifer, mais tout aussi déséquilibrante.
-
-Ce que ça pousse à faire :
-	•	Tout réduire à la matière
-	•	Ne croire que ce qui est mesurable
-	•	Être froid, logique, mécanique
-	•	Chercher le contrôle, la rigidité
-
-En excès :
-	•	Matérialisme extrême
-	•	Déconnexion émotionnelle
-	•	Vision “robotique” du monde
-	•	Obsession du pouvoir, de la technique
-
-👉 En résumé :
-trop de terre, aucune âme
-
-⸻
-
-⚖️ 4. La voie d’équilibre : le Christ
-
-Steiner parle d’une troisième force : le principe christique.
-
-👉 Ce n’est pas religieux au sens classique, mais une conscience d’équilibre.
-
-Elle permet :
-	•	d’être spirituel sans fuir la réalité
-	•	d’être ancré sans devenir froid ou fermé
-	•	d’unifier corps, âme et esprit
-
-👉 C’est la justesse intérieure.
-
-⸻
-
-🧠 5. Comment ça se voit dans la vie réelle
-
-Exemple concret :
-	•	Quelqu’un très “new age”, qui plane, refuse la réalité → tendance luciférienne
-	•	Quelqu’un ultra rationnel, froid, sans sens du vivant → tendance ahrimanienne
-
-👉 Et la plupart des gens oscillent entre les deux.
-
-⸻
-
-🧭 6. Ce que Steiner propose vraiment
-
-👉 Le but n’est pas de “supprimer” ces forces
-
-Mais :
-	•	les reconnaître
-	•	ne pas s’y identifier
-	•	trouver un axe intérieur stable
-
-⸻
-
-⚠️ Important (je vais être clair avec toi)
-
-Ces concepts sont puissants… mais ils peuvent aussi être mal utilisés.
-
-Si tu les prends littéralement ou émotionnellement :
-	•	tu peux commencer à voir “des forces partout”
-	•	ou interpréter tes états internes comme des influences extérieures
-
-👉 Ce que Steiner voulait à la base :
-une lecture consciente et lucide de la psyché humaine, pas une parano spirituelle.
-
-⸻
-
-✨ Résumé simple
-	•	Lucifer → illusion, excès de spirituel, ego subtil
-	•	Ahriman → rigidité, matérialisme, froideur
-	•	Christ → équilibre, conscience juste
-
-👉 Le travail : rester au centre
-
-</div>
-
-<div class="back">
-  <a href="menu.html">← Retour au menu</a>
+  <div class="back">
+    <a href="menu.html">← Retour au menu</a>
+  </div>
 </div>
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Contenu - Lumina</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('./galaxie.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #eaeaea;
+    }
+
+    /* voile sombre */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      z-index: -1;
+    }
+
+    /* HEADER MENU */
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 15px 25px;
+      border-bottom: 1px solid rgba(0,255,213,0.15);
+      backdrop-filter: blur(6px);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #eaeaea;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #00ffd5;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      color: #00ffd5;
+      text-shadow: 0 0 15px rgba(0,255,213,0.3);
+    }
+
+    /* CONTENU */
+    .container {
+      max-width: 850px;
+      margin: auto;
+      padding: 30px 20px 80px;
+    }
+
+    .box {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(0,255,213,0.12);
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 18px;
+      backdrop-filter: blur(6px);
+      line-height: 1.7;
+      font-size: 15.5px;
+    }
+
+    .box h2 {
+      color: #00ffd5;
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    .spacer {
+      height: 10px;
+    }
+
+    .back {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .back a {
+      color: #00ffd5;
+      text-decoration: none;
+      border: 1px solid rgba(0,255,213,0.4);
+      padding: 10px 18px;
+      border-radius: 10px;
+      background: rgba(0,0,0,0.3);
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">🏠 Accueil</a></li>
+      <li><a href="menu.html">☰ Menu</a></li>
+      <li><a href="auteurs.html">✍️ Auteurs</a></li>
+      <li><a href="contenu.html">📖 Contenu</a></li>
+      <li><a href="liens.html">🔗 Liens</a></li>
+    </ul>
+  </nav>
+</header>
+
+<h1>Contenu Lumina</h1>
+
+<div class="container">
+
+  <div class="box">
+    Passer de la croyance à la compréhension pour enfin savoir.
+  </div>
+
+  <div class="box">
+    La pensée de Rudolf Steiner est vaste, mais on peut la comprendre simplement si on la ramène à son idée centrale :
+    l’être humain n’est pas seulement un corps physique, mais un être spirituel en évolution.
+  </div>
+
+  <div class="box">
+    <h2>🌱 L’anthroposophie</h2>
+    Steiner propose une vision où science et spiritualité peuvent être reliées par l’expérience intérieure.
+    Ce n’est pas une croyance, mais une exploration consciente du réel.
+  </div>
+
+  <div class="box">
+    <h2>🧍‍♀️ Les 4 dimensions de l’être humain</h2>
+    • Corps physique<br>
+    • Corps éthérique (énergie vitale)<br>
+    • Corps astral (émotions, désirs)<br>
+    • Le “Je” (conscience spirituelle)
+  </div>
+
+  <div class="box">
+    <h2>🔁 Karma et réincarnation</h2>
+    La vie est un processus d’apprentissage. Le karma n’est pas une punition mais un mécanisme d’évolution intérieure.
+  </div>
+
+  <div class="box">
+    <h2>⚖️ Forces luciférienne & ahrimanienne</h2>
+    Deux tendances existent :
+    <br><br>
+    🔥 Luciférien → illusion, excès de spirituel, ego subtil<br>
+    🧊 Ahrimanien → rigidité, matérialisme, fermeture
+    <br><br>
+    Le but n’est pas de les combattre, mais de les équilibrer.
+  </div>
+
+  <div class="box">
+    <h2>🌿 Synthèse</h2>
+    L’évolution consiste à rester conscient, incarné, et stable entre ces deux pôles.
+  </div>
+
+  <div class="back">
+    <a href="menu.html">← Retour au menu</a>
+  </div>
+
+</div>
+
+</body>
+</html>
+Compose
+Écrire à Elara Althea
 
 
 
