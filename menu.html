@@ -16,22 +16,33 @@
 
       color: white;
       text-align: center;
+
+      overflow-x: hidden;
     }
 
-    /* voile sombre */
+    /* voile doux */
     body::before {
       content: "";
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.65);
+      background: radial-gradient(circle at center,
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.85));
       z-index: -1;
     }
 
     h1 {
-      margin-top: 60px;
-      font-size: 48px;
-      color: #00ffd5;
-      text-shadow: 0 0 20px rgba(0,255,213,0.4);
+      margin-top: 70px;
+      font-size: 52px;
+      letter-spacing: 6px;
+
+      color: #ffffff;
+
+      text-shadow:
+        0 0 10px #00ffd5,
+        0 0 25px rgba(0,255,213,0.4);
+
+      font-weight: 300;
     }
 
     /* MENU */
@@ -43,33 +54,86 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 18px;
+      gap: 16px;
     }
 
     .menu a {
       display: block;
-      width: 240px;
+      width: 260px;
 
-      padding: 14px;
-      border-radius: 12px;
+      padding: 14px 18px;
+      border-radius: 14px;
 
       text-decoration: none;
 
-      color: #00ffd5;
+      color: rgba(255,255,255,0.92);
       font-size: 16px;
-      font-weight: bold;
+      letter-spacing: 1px;
 
-      border: 1px solid rgba(0,255,213,0.4);
-      background: rgba(0,0,0,0.4);
+      border: 1px solid rgba(0,255,213,0.25);
+      background: rgba(0,0,0,0.35);
 
-      transition: 0.3s ease;
+      backdrop-filter: blur(6px);
+
+      transition: all 0.25s ease;
+      position: relative;
+    }
+
+    /* glow subtil */
+    .menu a::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 14px;
+      opacity: 0;
+      transition: 0.25s;
+      box-shadow: 0 0 20px rgba(0,255,213,0.25);
+    }
+
+    .menu a:hover::before {
+      opacity: 1;
     }
 
     .menu a:hover {
-      background: rgba(0,255,213,0.15);
-      box-shadow: 0 0 18px rgba(0,255,213,0.5);
-      transform: scale(1.05);
+      transform: translateY(-2px);
+      border-color: rgba(0,255,213,0.6);
+      color: #00ffd5;
     }
+
+    /* dernier bouton (accueil) un peu spécial */
+    .menu a:last-child {
+      margin-top: 10px;
+      border-color: rgba(255,255,255,0.2);
+      opacity: 0.9;
+    }
+
+    .menu a:last-child:hover {
+      border-color: #00ffd5;
+    }
+
+    /* petite animation entrée */
+    .menu a {
+      animation: appear 0.6s ease both;
+    }
+
+    .menu a:nth-child(1) { animation-delay: 0.05s; }
+    .menu a:nth-child(2) { animation-delay: 0.1s; }
+    .menu a:nth-child(3) { animation-delay: 0.15s; }
+    .menu a:nth-child(4) { animation-delay: 0.2s; }
+    .menu a:nth-child(5) { animation-delay: 0.25s; }
+    .menu a:nth-child(6) { animation-delay: 0.3s; }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
   </style>
 </head>
 
