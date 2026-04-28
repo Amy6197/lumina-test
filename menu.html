@@ -6,78 +6,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+      background: url('./galaxie.jpg') no-repeat center center fixed;
+      background-size: cover;
 
-  background: url('./galaxie.jpg') no-repeat center center fixed;
-  background-size: cover;
+      color: white;
+      text-align: center;
+    }
 
-  color: white;
-  text-align: center;
-}
+    /* voile sombre */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      z-index: -1;
+    }
 
-/* voile sombre */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.65);
-  z-index: -1;
-}
+    h1 {
+      margin-top: 60px;
+      font-size: 48px;
+      color: #00ffd5;
+      text-shadow: 0 0 20px rgba(0,255,213,0.4);
+    }
 
-h1 {
-  margin-top: 60px;
-  font-size: 48px;
-  color: #00ffd5;
-  text-shadow: 0 0 20px rgba(0,255,213,0.4);
-}
+    /* MENU */
+    .menu {
+      list-style: none;
+      padding: 0;
+      margin: 60px auto;
 
-/* MENU */
-.menu {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  align-items: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
 
-  margin-top: 60px;
-  padding: 0;
-}
+    .menu a {
+      display: block;
+      width: 240px;
 
-.menu a {
-  width: 240px;
-  padding: 14px;
+      padding: 14px;
+      border-radius: 12px;
 
-  border-radius: 12px;
-  text-decoration: none;
+      text-decoration: none;
 
-  color: #00ffd5;
-  font-size: 16px;
-  font-weight: bold;
+      color: #00ffd5;
+      font-size: 16px;
+      font-weight: bold;
 
-  border: 1px solid rgba(0,255,213,0.4);
-  background: rgba(0,0,0,0.4);
+      border: 1px solid rgba(0,255,213,0.4);
+      background: rgba(0,0,0,0.4);
 
-  transition: 0.3s ease;
-}
+      transition: 0.3s ease;
+    }
 
-.menu a:hover {
-  background: rgba(0,255,213,0.15);
-  box-shadow: 0 0 18px rgba(0,255,213,0.5);
-  transform: scale(1.05);
-}
-
+    .menu a:hover {
+      background: rgba(0,255,213,0.15);
+      box-shadow: 0 0 18px rgba(0,255,213,0.5);
+      transform: scale(1.05);
+    }
   </style>
 </head>
 
 <body>
 
-<h1>Menu Lumina</h1>
+  <h1>Menu Lumina</h1>
 
-<nav>
   <ul class="menu">
     <li><a href="auteurs.html">✍️ Auteurs</a></li>
     <li><a href="contenu.html">📖 Contenu</a></li>
@@ -86,7 +85,6 @@ h1 {
     <li><a href="liens.html">🔗 Liens</a></li>
     <li><a href="index.html">🏠 Retour à l'accueil</a></li>
   </ul>
-</nav>
 
 </body>
 </html>
