@@ -14,15 +14,15 @@
       color: white;
     }
 
-    /* 🌌 VOILE PLUS SOMBRE (version améliorée) */
+    /* 🌌 VOILE CONTRASTÉ (version que tu préfères) */
     body::before {
       content: "";
       position: fixed;
       inset: 0;
       background: radial-gradient(
-        circle at top,
-        rgba(0, 255, 213, 0.08),
-        rgba(0, 0, 0, 0.92)
+        circle at center,
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.92)
       );
       z-index: -1;
     }
@@ -67,15 +67,20 @@
       text-shadow: 0 0 18px rgba(0,255,213,0.35);
     }
 
-    /* ⭐ INTRO PLUS LISIBLE (important correction) */
+    /* ⭐ INTRO PLUS LISIBLE */
     .intro {
       text-align: center;
       max-width: 750px;
       margin: 0 auto 50px auto;
 
-      color: rgba(255,255,255,0.95);
+      color: rgba(255,255,255,0.96);
       font-size: 17px;
       line-height: 1.8;
+
+      padding: 10px 15px;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.25);
+      backdrop-filter: blur(4px);
     }
 
     .card {
