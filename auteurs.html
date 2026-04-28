@@ -19,35 +19,32 @@
       content: "";
       position: fixed;
       inset: 0;
-      background: radial-gradient(
-        circle at top,
-        rgba(0, 255, 213, 0.10),
-        rgba(0, 0, 0, 0.85)
+      background: radial-gradient(circle at top,
+        rgba(0,255,213,0.10),
+        rgba(0,0,0,0.85)
       );
       z-index: -1;
     }
 
-    /* HEADER */
     header {
       background: rgba(10, 10, 10, 0.55);
       padding: 15px 25px;
-      border-bottom: 1px solid rgba(0,255,213,0.15);
       backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(0,255,213,0.15);
     }
 
     nav ul {
       list-style: none;
       display: flex;
       gap: 20px;
+      justify-content: center;
       margin: 0;
       padding: 0;
-      justify-content: center;
     }
 
     nav a {
       color: #eaeaea;
       text-decoration: none;
-      font-weight: 500;
       transition: 0.3s;
     }
 
@@ -55,7 +52,6 @@
       color: #00ffd5;
     }
 
-    /* CONTENU */
     .container {
       max-width: 900px;
       margin: auto;
@@ -65,81 +61,53 @@
     h1 {
       text-align: center;
       font-size: 38px;
-      margin-bottom: 20px;
       color: #00ffd5;
       text-shadow: 0 0 18px rgba(0,255,213,0.35);
     }
 
+    /* ⭐ INTRO PLUS LISIBLE (ta demande) */
     .intro {
       text-align: center;
-      max-width: 700px;
+      max-width: 750px;
       margin: 0 auto 50px auto;
 
-      color: rgba(255,255,255,0.90);
-      line-height: 1.7;
-      font-size: 16px;
+      color: rgba(255,255,255,0.92); /* plus blanc = plus lisible */
+      font-size: 17px; /* légèrement + grand */
+      line-height: 1.8;
     }
 
-    /* CARTES */
     .card {
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(0,255,213,0.12);
       border-radius: 16px;
       padding: 22px;
       margin-bottom: 18px;
-
       backdrop-filter: blur(6px);
-      transition: 0.25s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(0,255,213,0.4);
-      box-shadow: 0 0 25px rgba(0,255,213,0.10);
     }
 
     .card h2 {
-      margin: 0 0 8px 0;
-      font-size: 20px;
       color: #00ffd5;
+      margin-bottom: 8px;
     }
 
     .card p {
-      margin: 0;
       color: rgba(235,235,235,0.85);
-      line-height: 1.6;
-    }
-
-    .note {
-      margin-top: 45px;
-      font-size: 13px;
-      text-align: center;
-      color: rgba(0,255,213,0.6);
-      line-height: 1.6;
     }
 
     .back {
-      margin-top: 40px;
       text-align: center;
+      margin-top: 40px;
     }
 
     .back a {
       color: #00ffd5;
       text-decoration: none;
-      font-weight: bold;
-      border: 1px solid rgba(0,255,213,0.4);
       padding: 10px 18px;
+      border: 1px solid rgba(0,255,213,0.4);
       border-radius: 10px;
       background: rgba(0,0,0,0.25);
-      transition: 0.3s;
       display: inline-block;
     }
-
-    .back a:hover {
-      background: rgba(0,255,213,0.12);
-      box-shadow: 0 0 15px rgba(0,255,213,0.2);
-    }
-
   </style>
 </head>
 
@@ -161,40 +129,22 @@
 
   <div class="intro">
     Cette page regroupe les sources philosophiques et spirituelles qui ont inspiré Lumina.<br>
-    Elles sont présentées comme des points de repère dans un cheminement intérieur.
+    Elles sont des repères dans un cheminement intérieur.
   </div>
 
   <div class="card">
     <h2>Rudolf Steiner</h2>
-    <p>Exploration des relations entre monde spirituel, matière et conscience humaine.</p>
+    <p>Exploration des relations entre monde spirituel et conscience humaine.</p>
   </div>
 
   <div class="card">
     <h2>Les Lettres du Christ</h2>
-    <p>Transmission centrée sur la transformation intérieure et la conscience unifiée.</p>
+    <p>Transmission sur la transformation intérieure.</p>
   </div>
 
   <div class="card">
     <h2>Le Livre d’Urantia</h2>
-    <p>Vision cosmologique de l’univers et des niveaux de conscience.</p>
-  </div>
-
-  <div class="card">
-    <h2>Bernard de Montréal</h2>
-    <p>Étude des mécanismes du mental, de l’ego et de la conscience supramentale.</p>
-  </div>
-
-  <div class="card">
-    <h2>Baird T. Spalding</h2>
-    <p>Expériences de conscience élevée et de maîtrise intérieure.</p>
-  </div>
-
-  <div class="note">
-    Ces contenus sont présentés dans une démarche personnelle d’exploration de la conscience.
-  </div>
-
-  <div class="back">
-    <a href="menu.html">← Retour au menu</a>
+    <p>Vision cosmologique de l’univers.</p>
   </div>
 
 </div>
