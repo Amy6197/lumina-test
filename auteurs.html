@@ -6,24 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-   body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(
-    circle at top,
-    rgba(0, 255, 213, 0.10),
-    rgba(0, 0, 0, 0.85)
-  );
-  z-index: -1;
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('./galaxie.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
 
-    /* voile */
+    /* 🌌 voile unique (corrigé) */
     body::before {
       content: "";
       position: fixed;
       inset: 0;
-      background: radial-gradient(circle at top, rgba(0,255,213,0.10), rgba(0,0,0,0.80));
+      background: radial-gradient(
+        circle at top,
+        rgba(0, 255, 213, 0.10),
+        rgba(0, 0, 0, 0.85)
+      );
       z-index: -1;
     }
 
@@ -70,7 +70,6 @@
       text-shadow: 0 0 18px rgba(0,255,213,0.35);
     }
 
-    /* INTRO plus visible */
     .intro {
       text-align: center;
       max-width: 700px;
@@ -111,7 +110,6 @@
       line-height: 1.6;
     }
 
-    /* NOTE */
     .note {
       margin-top: 45px;
       font-size: 13px;
@@ -120,7 +118,6 @@
       line-height: 1.6;
     }
 
-    /* RETOUR */
     .back {
       margin-top: 40px;
       text-align: center;
@@ -204,7 +201,6 @@
 
 </body>
 </html>
-
 
 
 
