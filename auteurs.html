@@ -14,21 +14,21 @@
       color: white;
     }
 
-    /* 🌌 VOILE UNIQUE ET PROPRE */
+    /* 🌌 VOILE PLUS SOMBRE (version améliorée) */
     body::before {
       content: "";
       position: fixed;
       inset: 0;
       background: radial-gradient(
         circle at top,
-        rgba(0,255,213,0.08),
-        rgba(0,0,0,0.92)
+        rgba(0, 255, 213, 0.08),
+        rgba(0, 0, 0, 0.92)
       );
       z-index: -1;
     }
 
     header {
-      background: rgba(10, 10, 10, 0.55);
+      background: rgba(10, 10, 10, 0.65);
       padding: 15px 25px;
       border-bottom: 1px solid rgba(0,255,213,0.15);
       backdrop-filter: blur(8px);
@@ -67,12 +67,13 @@
       text-shadow: 0 0 18px rgba(0,255,213,0.35);
     }
 
+    /* ⭐ INTRO PLUS LISIBLE (important correction) */
     .intro {
       text-align: center;
       max-width: 750px;
       margin: 0 auto 50px auto;
 
-      color: rgba(255,255,255,0.92);
+      color: rgba(255,255,255,0.95);
       font-size: 17px;
       line-height: 1.8;
     }
@@ -110,7 +111,6 @@
       font-size: 13px;
       text-align: center;
       color: rgba(0,255,213,0.6);
-      line-height: 1.6;
     }
 
     .back {
@@ -196,5 +196,4 @@
 
 </body>
 </html>
-
 
