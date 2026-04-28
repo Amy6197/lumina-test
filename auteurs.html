@@ -6,14 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-
-      background: url('./galaxie.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-    }
+   body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(0, 255, 213, 0.10),
+    rgba(0, 0, 0, 0.85)
+  );
+  z-index: -1;
+}
 
     /* voile */
     body::before {
