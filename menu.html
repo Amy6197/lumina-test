@@ -5,121 +5,88 @@
   <title>Menu - Lumina</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>.menu {
+  <style>
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+
+  background: url('./galaxie.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+  color: white;
+  text-align: center;
+}
+
+/* voile sombre */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: -1;
+}
+
+h1 {
+  margin-top: 60px;
+  font-size: 48px;
+  color: #00ffd5;
+  text-shadow: 0 0 20px rgba(0,255,213,0.4);
+}
+
+/* MENU */
+.menu {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   gap: 18px;
+  align-items: center;
 
-  padding: 15px;
-  margin: 0;
-
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(0, 255, 213, 0.15);
+  margin-top: 60px;
+  padding: 0;
 }
 
 .menu a {
-  color: rgba(255, 255, 255, 0.9);
-  text-decoration: none;
-  font-size: 15px;
-  letter-spacing: 1px;
+  width: 240px;
+  padding: 14px;
 
-  padding: 8px 12px;
-  border-radius: 10px;
+  border-radius: 12px;
+  text-decoration: none;
+
+  color: #00ffd5;
+  font-size: 16px;
+  font-weight: bold;
+
+  border: 1px solid rgba(0,255,213,0.4);
+  background: rgba(0,0,0,0.4);
 
   transition: 0.3s ease;
 }
 
 .menu a:hover {
-  color: #00ffd5;
-  background: rgba(0, 255, 213, 0.08);
-  box-shadow: 0 0 12px rgba(0, 255, 213, 0.2);
+  background: rgba(0,255,213,0.15);
+  box-shadow: 0 0 18px rgba(0,255,213,0.5);
+  transform: scale(1.05);
 }
-Compose
-Écrire à Elara Althea
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-
-      /* 🌌 fond galaxie */
-      background: url('./galaxie.jpg') no-repeat center center fixed;
-      background-size: cover;
-
-      color: white;
-      text-align: center;
-    }
-
-    /* voile sombre */
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.65);
-      z-index: -1;
-    }
-
-    h1 {
-      margin-top: 60px;
-      font-size: 48px;
-      color: #00ffd5;
-      text-shadow: 0 0 20px rgba(0,255,213,0.4);
-    }
-
-    .menu {
-      margin-top: 60px;
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      align-items: center;
-    }
-
-    .menu a {
-      width: 240px;
-      padding: 14px;
-
-      border-radius: 12px;
-      text-decoration: none;
-
-      color: #00ffd5;
-      font-size: 16px;
-      font-weight: bold;
-
-      border: 1px solid rgba(0,255,213,0.4);
-      background: rgba(0,0,0,0.4);
-
-      transition: 0.3s ease;
-    }
-
-    .menu a:hover {
-      background: rgba(0,255,213,0.15);
-      box-shadow: 0 0 18px rgba(0,255,213,0.5);
-      transform: scale(1.05);
-    }
 
   </style>
 </head>
 
 <body>
 
-  <h1>Menu Lumina</h1>
+<h1>Menu Lumina</h1>
 
-<header>
-  <nav>
-    <ul class="menu">
-      <li><a href="auteurs.html">✍️ Auteurs</a></li>
-      <li><a href="contenu.html">📖 Contenu</a></li>
-      <li><a href="analyse.html">🧠 Analyse</a></li>
-      <li><a href="oracle.html">🔮 Oracle / Tarot</a></li>
-      <li><a href="liens.html">🔗 Liens</a></li>
-      <li><a href="index.html">🏠 Retour à l'accueil</a></li>
-    </ul>
-  </nav>
-</header>
-  </div>
+<nav>
+  <ul class="menu">
+    <li><a href="auteurs.html">✍️ Auteurs</a></li>
+    <li><a href="contenu.html">📖 Contenu</a></li>
+    <li><a href="analyse.html">🧠 Analyse</a></li>
+    <li><a href="oracle.html">🔮 Oracle / Tarot</a></li>
+    <li><a href="liens.html">🔗 Liens</a></li>
+    <li><a href="index.html">🏠 Retour à l'accueil</a></li>
+  </ul>
+</nav>
 
 </body>
 </html>
