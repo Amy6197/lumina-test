@@ -1,178 +1,693 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
-  <title>Auteurs & Sources - Lumina</title>
+  <title>Œuvres & Auteurs - LUMINA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('./galaxie.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    /* voile doux */
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: radial-gradient(circle at center,
-        rgba(0,0,0,0.4),
-        rgba(0,0,0,0.85));
-      z-index: -1;
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      color:white;
+      background:url('./galaxie.jpg') center center fixed;
+      background-size:cover;
+      line-height:1.7;
     }
 
-    header {
-      background: rgba(10, 10, 10, 0.65);
-      padding: 15px 25px;
-      border-bottom: 1px solid rgba(0,255,213,0.15);
-      backdrop-filter: blur(8px);
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:
+      radial-gradient(circle at center,
+      rgba(0,0,0,.35),
+      rgba(0,0,0,.88));
+      z-index:-1;
     }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      margin: 0;
-      padding: 0;
+    header{
+      background:rgba(8,8,18,.72);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(0,255,213,.18);
+      position:sticky;
+      top:0;
+      z-index:1000;
     }
 
-    nav a {
-      color: #eaeaea;
-      text-decoration: none;
-      transition: 0.3s;
+    nav{
+      max-width:1200px;
+      margin:auto;
+      padding:18px;
     }
 
-    nav a:hover {
-      color: #00ffd5;
+    nav ul{
+      display:flex;
+      justify-content:center;
+      gap:28px;
+      list-style:none;
+      flex-wrap:wrap;
     }
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 60px 20px;
+    nav a{
+      color:white;
+      text-decoration:none;
+      transition:.3s;
     }
 
-    h1 {
-      text-align: center;
-      font-size: 38px;
-      margin-bottom: 20px;
-      color: #00ffd5;
-      text-shadow: 0 0 18px rgba(0,255,213,0.35);
+    nav a:hover{
+      color:#00ffd5;
     }
 
-    /* INTRO */
-    .intro {
-      text-align: center;
-      max-width: 750px;
-      margin: 0 auto 50px auto;
-
-      color: rgba(255,255,255,0.96);
-      font-size: 17px;
-      line-height: 1.8;
-
-      padding: 10px 15px;
-      border-radius: 12px;
-      background: rgba(0,0,0,0.25);
-      backdrop-filter: blur(4px);
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:60px 25px 80px;
     }
 
-    /* CARTES */
-    .card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(0,255,213,0.12);
-      border-radius: 16px;
-      padding: 22px;
-      margin-bottom: 18px;
-      backdrop-filter: blur(6px);
-      transition: 0.25s ease;
+    h1{
+      text-align:center;
+      font-size:48px;
+      color:#00ffd5;
+      margin-bottom:20px;
+      text-shadow:0 0 20px rgba(0,255,213,.35);
     }
 
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(0,255,213,0.4);
-      box-shadow: 0 0 25px rgba(0,255,213,0.10);
+    .subtitle{
+      text-align:center;
+      font-size:20px;
+      color:#d8ffff;
+      margin-bottom:45px;
+      font-style:italic;
     }
 
-    .card h2 {
-      margin: 0 0 8px 0;
-      font-size: 20px;
-      color: #00ffd5;
+    .intro{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(0,255,213,.15);
+      border-radius:20px;
+      backdrop-filter:blur(8px);
+      padding:30px;
+      margin-bottom:55px;
     }
 
-    .card p {
-      margin: 0;
-      color: rgba(235,235,235,0.85);
-      line-height: 1.6;
+    .intro p{
+      margin-bottom:18px;
     }
 
-    /* NOTE */
-    .note {
-      margin-top: 45px;
-      font-size: 13px;
-      text-align: center;
-      color: rgba(0,255,213,0.6);
+    section{
+      margin-bottom:60px;
+    }
+
+    section h2{
+      color:#00ffd5;
+      margin-bottom:25px;
+      border-left:4px solid #00ffd5;
+      padding-left:14px;
+      font-size:30px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(0,255,213,.12);
+      border-radius:18px;
+      padding:22px;
+      transition:.35s;
+      backdrop-filter:blur(6px);
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      border-color:#00ffd5;
+      box-shadow:0 0 30px rgba(0,255,213,.18);
+    }
+
+    .card h3{
+      color:#00ffd5;
+      margin-bottom:12px;
+    }
+
+    .card p{
+      color:#efefef;
+      font-size:15px;
+    }
+
+    footer{
+      text-align:center;
+      padding:45px 20px;
+      color:rgba(255,255,255,.65);
+      font-size:14px;
+    }
+
+    @media(max-width:700px){
+
+      h1{
+        font-size:34px;
+      }
+
+      .subtitle{
+        font-size:17px;
+      }
+
+      section h2{
+        font-size:25px;
+      }
+
     }
 
   </style>
+
 </head>
 
 <body>
 
 <header>
-  <nav>
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="menu.html">Menu</a></li>
-      
-    </ul>
-  </nav>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Accueil</a></li>
+
+<li><a href="menu.html">Menu</a></li>
+
+</ul>
+
+</nav>
+
 </header>
 
 <div class="container">
 
-  <h1>Auteurs & Sources</h1>
+<h1>Œuvres & Auteurs</h1>
 
-  <div class="intro">
-    Cette page regroupe les sources philosophiques et spirituelles qui ont inspiré Lumina.<br>
-    Elles sont présentées comme des points de repère dans un cheminement intérieur.
-  </div>
+<p class="subtitle">
 
-  <div class="card">
-    <h2>Rudolf Steiner</h2>
-    <p>Exploration des relations entre monde spirituel, matière et conscience humaine.</p>
-  </div>
+Les grandes œuvres, les grands penseurs et les traditions qui ont marqué la quête humaine de compréhension, de conscience et de sagesse.
 
-  <div class="card">
-    <h2>Les Lettres du Christ</h2>
-    <p>Transmission centrée sur la transformation intérieure et la conscience unifiée.</p>
-  </div>
+</p>
 
-  <div class="card">
-    <h2>Le Livre d’Urantia</h2>
-    <p>Vision cosmologique de l’univers et des niveaux de conscience.</p>
-  </div>
+<div class="intro">
 
-  <div class="card">
-    <h2>Bernard de Montréal</h2>
-    <p>Étude des mécanismes du mental, de l’ego et de la conscience supramentale.</p>
-  </div>
+<p>
 
-  <div class="card">
-    <h2>Baird T. Spalding</h2>
-    <p>Expériences de conscience élevée et de maîtrise intérieure.</p>
-  </div>
+Bienvenue dans la bibliothèque de <strong>LUMINA</strong>.
 
-  <div class="note">
-    Ces contenus sont présentés dans une démarche personnelle d’exploration de la conscience. D'autres oeuvres et auteurs à venir...
-  </div>
+</p>
+
+<p>
+
+Cette page ne cherche pas à présenter une vérité unique.
+
+Elle propose un parcours à travers les grandes œuvres, les grands auteurs, les traditions philosophiques, spirituelles, scientifiques et psychologiques qui ont nourri la réflexion humaine depuis l'Antiquité jusqu'à nos jours.
+
+</p>
+
+<p>
+
+Chaque fiche sera progressivement enrichie afin de distinguer clairement :
+
+</p>
+
+<ul style="margin-left:25px;margin-top:15px;line-height:2;">
+<li>📜 Les faits historiques.</li>
+<li>🔬 Les connaissances scientifiques.</li>
+<li>🧠 Les approches philosophiques et psychologiques.</li>
+<li>🌹 Les traditions spirituelles et symboliques.</li>
+</ul>
+
+</div>
+<!-- GRANDES TRADITIONS -->
+
+<section>
+
+<h2>🌍 Grandes Traditions</h2>
+
+<div class="grid">
+
+
+<div class="card">
+<h3>🏺 Égypte ancienne</h3>
+<p>
+Une civilisation où se rencontrent mythes, symboles, cosmologie et recherche de l'harmonie entre l'être humain, la nature et le divin.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🜍 Hermétisme</h3>
+<p>
+Tradition philosophique issue du monde gréco-égyptien associée à Hermès Trismégiste. Elle explore les liens entre le cosmos, l'être humain et la connaissance intérieure.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🏛️ Philosophie grecque</h3>
+<p>
+De Socrate à Platon, une recherche de la sagesse, de la vérité, de la connaissance de soi et de la nature du réel.
+</p>
+</div>
+
+
+<div class="card">
+<h3>✝️ Christianisme</h3>
+<p>
+Une tradition centrée sur la figure de Jésus de Nazareth, l'amour, la transformation intérieure et la relation entre l'humain et le divin.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🌸 Bouddhisme</h3>
+<p>
+Une voie d'exploration de la conscience fondée sur l'observation intérieure, la compassion et la libération de la souffrance.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🌿 Anthroposophie</h3>
+<p>
+Courant fondé par Rudolf Steiner explorant les relations entre conscience humaine, nature, art, science et spiritualité.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🧠 Psychologie analytique</h3>
+<p>
+Approche développée par Carl Gustav Jung étudiant l'inconscient, les archétypes, les rêves et le processus d'individuation.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🔬 Science & conscience</h3>
+<p>
+Exploration des découvertes scientifiques concernant l'évolution, le cerveau, l'univers et les grandes questions liées à la conscience.
+</p>
+</div>
+
 
 </div>
 
-</body>
-</html>
+</section>
 
+
+<!-- GRANDS PASSEURS -->
+
+<section>
+
+<h2>👤 Les Grands Passeurs</h2>
+
+<div class="grid">
+
+
+<div class="card">
+<h3>🏺 Hermès Trismégiste</h3>
+<p>
+Figure symbolique de l'hermétisme, associée à la sagesse, aux correspondances entre le cosmos et l'être humain, et aux textes hermétiques.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🪷 Bouddha</h3>
+<p>
+Fondateur historique du bouddhisme. Son enseignement explore la souffrance, l'attachement, la méditation et l'éveil de la conscience.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🏛️ Socrate</h3>
+<p>
+Philosophe grec connu pour son art du questionnement et sa recherche de la sagesse par la connaissance de soi.
+</p>
+</div>
+
+
+<div class="card">
+<h3>📖 Platon</h3>
+<p>
+Philosophe grec auteur notamment de l'allégorie de la caverne, du Banquet et de réflexions majeures sur la vérité et le monde des idées.
+</p>
+</div>
+
+
+<div class="card">
+<h3>✝️ Jésus de Nazareth</h3>
+<p>
+Figure centrale du christianisme dont l'enseignement est associé à l'amour, au pardon et à la transformation intérieure.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🌹 Marie Madeleine (Myriam de Magdala)</h3>
+<p>
+Disciple de Jésus présentée dans les Évangiles comme témoin de la crucifixion et de la résurrection. Figure majeure des traditions chrétiennes et symboliques.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🧠 Sigmund Freud</h3>
+<p>
+Fondateur de la psychanalyse. Ses travaux ont profondément influencé l'étude de l'inconscient, du rêve et de la psyché humaine.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🌑 Carl Gustav Jung</h3>
+<p>
+Créateur de la psychologie analytique. Il a développé les concepts d'archétypes, d'Ombre, d'inconscient collectif et d'individuation.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🌿 Rudolf Steiner</h3>
+<p>
+Philosophe et fondateur de l'anthroposophie. Il a exploré l'évolution de la conscience humaine et les liens entre esprit et matière.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🜍 Franz Bardon</h3>
+<p>
+Auteur d'ouvrages d'hermétisme pratique portant sur le développement intérieur, la discipline mentale et la connaissance de soi.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🌌 Pierre Teilhard de Chardin</h3>
+<p>
+Jésuite, paléontologue et philosophe ayant proposé une réflexion sur l'évolution de la conscience et la noosphère.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🌠 Joseph Campbell</h3>
+<p>
+Mythologue connu pour ses travaux sur le voyage du héros et les structures communes des grands récits humains.
+</p>
+</div>
+
+
+<div class="card">
+<h3>⭐ Carl Sagan</h3>
+<p>
+Astronome et vulgarisateur scientifique ayant transmis une vision poétique de l'univers et de notre lien avec les étoiles.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🌹 Bernard de Montréal</h3>
+<p>
+Auteur contemporain explorant les thèmes de la conscience, du mental humain et de la transformation intérieure.
+</p>
+</div>
+
+
+<div class="card">
+<h3>✨ Baird T. Spalding</h3>
+<p>
+Auteur associé aux récits de développement spirituel et d'expériences de conscience élevée.
+</p>
+</div>
+
+
+</div>
+
+</section>
+<!-- ŒUVRES MAJEURES -->
+
+<section>
+
+<h2>📚 Œuvres majeures</h2>
+
+<div class="grid">
+
+
+<div class="card">
+<h3>📜 Corpus Hermeticum</h3>
+<p>
+Ensemble de textes philosophiques gréco-égyptiens attribués traditionnellement à Hermès Trismégiste. Ils explorent la connaissance de soi, le cosmos et la relation entre l'humain et le divin.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🜍 La Table d'Émeraude</h3>
+<p>
+Texte hermétique célèbre associé à Hermès Trismégiste. Sa formule "ce qui est en haut est comme ce qui est en bas" a profondément marqué l'histoire de l'alchimie et du symbolisme.
+</p>
+</div>
+
+
+<div class="card">
+<h3>✨ Le Kybalion</h3>
+<p>
+Œuvre publiée au début du XXe siècle présentant sept principes dits hermétiques. Elle appartient à l'ésotérisme moderne et doit être distinguée des textes hermétiques antiques.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🏛️ Les Dialogues de Platon</h3>
+<p>
+Œuvres majeures de la philosophie grecque abordant la connaissance, la vérité, l'amour, l'âme et la recherche de la sagesse.
+</p>
+</div>
+
+
+<div class="card">
+<h3>❤️ Le Banquet</h3>
+<p>
+Dialogue de Platon consacré à l'amour, à la beauté et à l'élévation de l'âme vers une compréhension plus profonde du réel.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🌌 L'Allégorie de la Caverne</h3>
+<p>
+Passage célèbre de Platon illustrant le chemin de la connaissance et le passage des apparences vers une compréhension plus profonde.
+</p>
+</div>
+
+
+<div class="card">
+<h3>✝️ Les Évangiles</h3>
+<p>
+Textes fondateurs du christianisme relatant la vie, l'enseignement, la mort et la résurrection de Jésus de Nazareth selon différentes traditions.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🌹 L'Évangile de Marie</h3>
+<p>
+Texte chrétien ancien apocryphe présentant Marie Madeleine comme une disciple recevant un enseignement spirituel particulier.
+</p>
+</div>
+
+
+<div class="card">
+<h3>📜 La Bibliothèque de Nag Hammadi</h3>
+<p>
+Collection de textes anciens découverts en Égypte en 1945, comprenant notamment des écrits gnostiques importants pour l'étude du christianisme des premiers siècles.
+</p>
+</div>
+
+
+<div class="card">
+<h3>💖 Les Lettres du Christ</h3>
+<p>
+Œuvre spirituelle contemporaine centrée sur la conscience, l'amour, la transformation intérieure et la compréhension de la nature humaine.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🌌 Le Livre d'Urantia</h3>
+<p>
+Texte spirituel du XXe siècle proposant une vaste vision cosmologique de l'univers, de l'humanité et de l'évolution de la conscience.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🌑 Le Livre Rouge - Carl Gustav Jung</h3>
+<p>
+Œuvre personnelle de Jung explorant son expérience intérieure, ses visions symboliques et son travail sur l'inconscient.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🧠 Psychologie et Alchimie - Jung</h3>
+<p>
+Étude des symboles alchimiques comme représentations des transformations profondes de la psyché humaine.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🌑 Réponse à Job - Jung</h3>
+<p>
+Réflexion psychologique et symbolique de Jung autour de la souffrance, du divin et de l'évolution de la conscience humaine.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🧙 Franz Bardon - Initiation hermétique</h3>
+<p>
+Série d'ouvrages consacrés à l'hermétisme pratique, au développement intérieur et à la discipline de la conscience.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🌍 Le Héros aux mille et un visages - Joseph Campbell</h3>
+<p>
+Ouvrage étudiant les structures communes des mythes et le parcours symbolique du héros à travers les cultures.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🌠 L'Avenir de l'homme - Teilhard de Chardin</h3>
+<p>
+Réflexion sur l'évolution humaine, la conscience et l'émergence d'une dimension collective de la pensée appelée noosphère.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🌿 Œuvres de Rudolf Steiner</h3>
+<p>
+Ensemble d'écrits explorant la philosophie, la spiritualité, l'éducation, l'art et l'évolution de la conscience humaine.
+</p>
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- GRANDES QUESTIONS -->
+
+<section>
+
+<h2>🌌 Les Grandes Questions de LUMINA</h2>
+
+
+<div class="grid">
+
+
+<div class="card">
+<h3>🪞 Qui suis-je ?</h3>
+<p>
+Exploration de l'identité, du soi, de la conscience et du chemin intérieur.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🧠 La conscience</h3>
+<p>
+Dialogue entre neurosciences, philosophie, psychologie et traditions spirituelles.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🌑 L'Ombre</h3>
+<p>
+Concept développé notamment par Jung : rencontrer les aspects cachés de soi pour parvenir à une plus grande intégration intérieure.
+</p>
+</div>
+
+
+<div class="card">
+<h3>❤️ L'Amour</h3>
+<p>
+De l'amour humain à l'amour universel : une réflexion traversant philosophie, psychologie et spiritualité.
+</p>
+</div>
+
+
+<div class="card">
+<h3>⚖️ Le Bien et le Mal</h3>
+<p>
+Question fondamentale étudiée par les religions, les philosophes et les psychologues depuis des millénaires.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🌱 La souffrance</h3>
+<p>
+Comprendre la souffrance humaine à travers la psychologie, la philosophie et les différentes voies de transformation.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🌌 La mort et l'après-vie</h3>
+<p>
+Exploration des différentes conceptions de la mort, de l'âme et de la continuité de la conscience.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🌹 Marie Madeleine & les Vierges Noires</h3>
+<p>
+Étude historique, symbolique et spirituelle des figures féminines sacrées dans l'histoire occidentale.
+</p>
+</div>
+
+
+<div class="card">
+<h3>✨ Sophia - La Sagesse</h3>
+<p>
+Symbole ancien de la sagesse divine présent dans plusieurs traditions philosophiques et spirituelles.
+</p>
+</div>
+
+
+<div class="card">
+<h3>🌍 L'évolution de la conscience</h3>
+<p>
+Dialogue entre Darwin, psychologie évolutionniste, Jung, Teilhard de Chardin et les visions spirituelles de l'évolution humaine.
+</p>
+</div>
+
+
+</div>
+
+</section>
